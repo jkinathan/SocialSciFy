@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model #get current user present in this project
 from django.contrib.auth.forms import UserCreationForm
 
-class UserCreateForm(UserCreateForm):
+class UserCreateForm(UserCreationForm):
     
     class Meta:
         fields = ('username','email','password1','password2')

@@ -3,6 +3,13 @@
 
 {% block bodyblock %}
     <div class="container">
-        
+        <h1>Sign up</h1>
+        <form method="POST">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+        <input class="btn btn-secondary" type="button" value="Sign up">
+        </form>
     </div>
 {% endblock bodyblock %}
