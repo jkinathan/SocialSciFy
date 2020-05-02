@@ -4,7 +4,7 @@ from django.utils.text import slugify
 # Create your models here.
 #groups models.py file
 import misaka
-
+from django.urls import reverse
 from django.contrib.auth import get_user_model
 User = get_user_model() #get current user instance 
 
@@ -28,6 +28,8 @@ class Group(models.Model):
     
     def get_absolute_url(self):
         return reverse("groups:single", kwargs={"slug": self.slug})
+    
+    #once someone has saved a group, where to send them is why we use get_absolute_url
     
     class Meta:
         ordering = ['name']
