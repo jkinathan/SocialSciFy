@@ -21,6 +21,7 @@ class Post(models.Model):
     
     def save(self, *args, **kwargs):
         #self.message_html = misaka.html(self.message)
+        #eliminated misaka coz its not working
         super().save(*args, **kwargs)
         
     def get_absolute_url(self):
