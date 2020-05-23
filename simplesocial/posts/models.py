@@ -5,9 +5,9 @@ from django.conf import settings
 # Create your models here.
 # posts models.py
 from groups.models import Group
-
+# import misaka .... this is for markdown text in the text area
 from django.contrib.auth import get_user_model
-User = get_user_model()
+User = get_user_model()   #get current logged in user
 
 class Post(models.Model):
     user = models.ForeignKey(User, related_name="posts")
